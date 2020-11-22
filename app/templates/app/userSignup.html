@@ -1,0 +1,112 @@
+</!DOCTYPE html>
+<html >
+<head>
+	<title>RecommendME!!!- Customer Signup</title>
+	<link rel="stylesheet" href="userSignup.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="userSignup.js"></script>
+</head>
+<body >
+
+		<div class='top'>
+		
+		<h3  style="font-family: 'Trebuchet MS', Helvetica, sans-serif; text-align: center; color: white ;padding-top: 300px; font-size: 50px;opacity: 0.9">WELCOME</h3>
+
+		<h1 style="font-family: 'Trebuchet MS', Helvetica, sans-serif; text-align: center;color: white; font-size: 60px;opacity: 0.9" >Elegant SignUp form For Customers </h1>
+		
+	</div>
+<div class='backb'>		
+<div class='formm'>
+	<form action="" method="POST">
+		{% csrf_token %}
+		<label for="fname">Username</label><br>
+		<input type="text" id='Username' name="Username" placeholder="Username">
+		<br><br>
+		<label for="fname">First Name</label><br>
+		<input type="text" id='Fname' name="Fname" placeholder="Enter First name">
+		<br>
+		<label for="fname">Last Namee</label><br>
+		<input type="text" id='Lastname' name="Lastname" placeholder="Enter last name">
+		<br><br>
+		<label for="address">User's Location</label><br>
+		<input type="text" id='address' name="address" placeholder="Enter proper location where you live" >
+<br><br>
+
+
+<label>Your Date of Birth <label><br>
+<input type="date" name="birthday" id='birthday' onchange="ageCount()"> 
+
+<br><br>
+<label for='cuisine'>Mark up your favorite cuisines</label>
+<br>
+<label for='Indian'>Indian</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Indian'>
+<br>
+<label for='Chinese'>Chinese</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Chinese'>
+<br>
+<label for='Thai'>Thai</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Thai'>
+<br>
+<label for='Indonesian'>Indonesian</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Indonesian'>
+<br>
+<label for='Italian'>Italian</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Italian'>
+<br>
+<label for='Spainish'>Spainish</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Spainish'>
+<br>
+<label for='Japanese'>Japanese</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Japanese'>
+<br>
+<label for='Greece'>Greece</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Greece'><br>
+<label for='French'>French</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='French'>
+
+<br>
+<label for='Moroccan'>Moroccan</label>
+<input type="checkbox" name="cuisine" id='cuisine' value='Moroccan'>
+<br>
+<br>
+<label>Choose a profile picture for your account</label><br>
+<input type="file" name="profile" id='pic'>
+<br>
+<img src="#" id="profile" alt="Your image" height=300 width=300>
+<br><br>
+<label for='foodType'>Choose your food type</label>
+<br>
+<label for="veg">Vegetarian</label>
+<input type="radio" name="foodType" value="veg">
+<br>
+<label for="non-veg">Non-Vegetarian</label>
+<input type="radio" name="foodType" value="non-veg">
+<br>
+<label for="both">Both</label>
+<input type="radio" name="foodType" value="both">
+<br><br>
+<label>Enter an Email for your account</label><br>
+<input type="email" name="email" id='email' placeholder="Please enter an email starting with 'U' ">
+<br><br>
+<label>Enter a strog password for your account consisting of atleast 8 digits</label><br>
+<input type="password" name="pwd" id='pwd' placeholder="Password">
+
+<br><br>
+<label>Enter your contact number</label><br>
+<input type="tel" id="phone" name="phone" placeholder="999999999" pattern="[0-9]{10}" required>
+
+<br><br>
+
+<input type="submit" value="Submit" >
+
+	</form>
+
+</div>
+</div>
+
+
+
+</body>
+</html>
