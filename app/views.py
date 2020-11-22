@@ -8,10 +8,10 @@ from django.contrib.auth.models import User
 from .models import Customer
 from .forms import userSignupform, loginform
 
+
 # Create your views here.
 
 def login(request):
-    form = loginform(request.POST or None)
     if request.method == "POST":
         form = loginform(request.POST)
         user = authenticate(username=form.data.get('Username'), password=form.data.get('password'))
@@ -26,6 +26,7 @@ def login(request):
 def hotelSignup(request):
     return render(request, 'app/hotelSignup.html')
 
+
 def userSignup(request):
     if request.method == "POST":
         form = userSignupform(request.POST)
@@ -36,4 +37,4 @@ def userSignup(request):
     
     return render(request, 'app/userSignup.html', {'form': form})
 
-       
+    return render(request, 'app/userSignup.html', {'form': form})
