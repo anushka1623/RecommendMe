@@ -1,27 +1,27 @@
 from django import forms
-from django.contrib.auth import (
-     authenticate,
-     get_user_model
-)
-
-User = get_user_model()
+from django.contrib.auth import authenticate
+from .models import Customer
 
 class userSignupform(forms.ModelForm):
-    Username= forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)
-
+   
     class Meta:
-        model = User
+        model = Customer
         fields = [
             'Username',
-            'password'
+            'password',
+            'FirstName',
+            'LastName',
+            'Location',
+            'foodtype',
+            'cuisinetype',
+            'DateOfBirth',
+            'Email',
+            'ProfilePic',
+            'ContactNo'
         ]
-    
-
-
-    
+      
 class loginform(forms.Form):
-    Username= forms.CharField()
+    Username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
 
     def clean(self, *args, **kwargs):
@@ -29,7 +29,7 @@ class loginform(forms.Form):
         password = self.cleaned_data.get('password')
     
         if Username and password:
-            user = authenticate(Username = Username, password= password)
+            user = authenticate(Username=Username, password=password)
             if not user:
                 raise forms.ValidationError('This user does not exist')
             if not user.check_password(password):
