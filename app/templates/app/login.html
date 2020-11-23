@@ -77,16 +77,17 @@
 <dv class="login" style="font-size: 26px">
         <form id='login' method='POST'> {% csrf_token %}
 			<label><b>Username</b></label>
-			<input type="text" name="Uname" id="Uname" placeholder="Username">
+			<input type="text" name="Username" id="Uname" placeholder="Username" required>
 			<br>
 			<label><b>Password</b></label>
-			<input type="Password" name="Pass" id="Pass" placeholder="Password">
+			<input type="Password" name="password" id="Pass" placeholder="Password" required>
 			<br><br>
+			<p>{{error}}</p>
+			<button type="submit" name="loginUser" id="loginUser"  class="button" style="margin-bottom: 5px;"><span>Login User</span></button>
+      		<br>
+      		<button type="submit" name="loginHotel" id="loginHotel"  class="button"><span>Login Restaurant</span></button>
+        	<br><br>
       </form>
-      <button name="loginUser" id="loginUser"  class="button" style="margin-bottom: 5px;"><span>Login User</span></button>
-      <br>
-      <button name="loginHotel" id="loginHotel"  class="button"><span>Login Restaurant</span></button>
-        <br><br>
       <button name="up" id="up"  class="button" onclick="location.href='http://127.0.0.1:8000/userSignup/'" style="margin-bottom: 5px;"><span>SignUpUser</span> </button> 
 <br>
       <button name="upr" id="upr"  class="button" onclick="location.href='http://127.0.0.1:8000/hotelSignup'" ><span>SignUpRestaurant</span></button>
