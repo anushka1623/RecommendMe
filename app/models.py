@@ -22,7 +22,7 @@ class Customer(models.Model):
         ('French', 'French'),
         ('Moroccan', 'Moroccan')
     )
-    Username = models.CharField(max_length=300, null=True)
+    username = models.CharField(max_length=300, null=True, unique=True)
     password = models.CharField(max_length=300, null=True)
     FirstName= models.CharField(max_length=300, null=True)
     LastName= models.CharField(max_length=300, null=True)
@@ -35,7 +35,7 @@ class Customer(models.Model):
 
 
     def __str__(self):
-       return self.Username
+       return self.username
 
 class Hotel(models.Model):
     FoodType = (
@@ -64,12 +64,10 @@ class Hotel(models.Model):
     Location = models.TextField(null = True)
     foodtype = models.CharField(max_length=300, null=True, choices = FoodType)
     cuisinetype = MultiSelectField(null=True,choices = CuisineType)
-    BusinessID = models.CharField(max_length=300, null=True)
+    BusinessID = models.CharField(max_length=300, null=True, unique=True)
     Email = models.EmailField(null = True)
-    ProfilePic = models.ImageField(null = True)
     ContactNo = models.CharField(max_length=10, null=True)
 
 
     def __str__(self):
-       return self.Username
-
+       return self.HotelName

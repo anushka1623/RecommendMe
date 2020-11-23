@@ -1,25 +1,36 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.forms import inlineformset_factory
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate
 from django.contrib.auth import login as django_login
 
 from django.contrib.auth.models import User
-from .models import Customer
-from .forms import userSignupform
+from .models import Customer, Hotel
+from .forms import userSignupform, hotelSignupform
 
 
 # Create your views here.
 
 def login(request):
     context = {}
-    if request.method == "POST":
-        Username = request.POST['Username']
+    if request.method == "POST" and 'loginUser' in request.POST:
+        username = request.POST['username']
         password = request.POST['password']
-        user = authenticate(request, Username=Username, password=password)
+        user = authenticate(request, username=username, password=password)
         if user:
-            login(request, user)
-            return render(request, 'app/Userprofile.html', context)
+            django_login(request, user)
+            return redirect('/Userprofile/')
+        else:
+            context["error"] = "Provide Valid Credentials!!"
+            return render(request, 'app/login.html', context)
+    
+    if request.method == "POST" and 'loginHotel' in request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user:
+            django_login(request, user)
+            return redirect('/hotelpage/')
         else:
             context["error"] = "Provide Valid Credentials!!"
             return render(request, 'app/login.html', context)
@@ -30,20 +41,48 @@ def login(request):
 
 
 def hotelSignup(request):
-    context ={}
-    context['user'] = request.user
-    return render(request, 'app/hotelSignup.html', context)
+    if request.method == "POST" :
+        form = hotelSignupform(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['BusinessID']
+            print(username)
+            password = form.cleaned_data['password']
+            user = User.objects.create_user(username=username,password=password)
+            user.save()
+            return redirect('/login/')
+    else:
+        form = hotelSignupform()
+    
+    return render(request, 'app/hotelSignup.html', {'form': form})
 
 def Userprofile(request):
     return render(request, 'app/Userprofile.html')
 
+def mainscreen(request):
+    return render(request, 'app/mainscreen.html')
+
+def updateUserProfile(request):
+    return render(request, 'app/updateUserProfile.html')
+
+def updateHotelProfile(request):
+    return render(request, 'app/updateHotelProfile.html')
+
+def hotelpage(request):
+    return render(request, 'app/hotelpage.html')
+
 
 def userSignup(request):
-    if request.method == "POST":
+    if request.method == "POST" :
         form = userSignupform(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'app/login.html')
+            username = form.cleaned_data['username']
+            print(username)
+            password = form.cleaned_data['password']
+            user = User.objects.create_user(username=username,password=password)
+            user.save()
+            return redirect('/login/')
     else:
         form = userSignupform()
     

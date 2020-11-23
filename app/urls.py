@@ -6,5 +6,9 @@ urlpatterns = [
     path('userSignup/', views.userSignup),
     path('hotelSignup/', views.hotelSignup),
     path('Userprofile/', views.Userprofile),
+    path('mainscreen/', views.mainscreen),
+    path('updateUserProfile/', views.updateUserProfile),
+    path('hotelpage/', views.hotelpage),
+    path('updateHotelProfile/', views.updateUserProfile),
     
 ]

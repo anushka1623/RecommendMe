@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Screen</title>
+    <link rel = "stylesheet" href="{% static '/cssFiles/stylemainscreen.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+   <div class="main" id="home">
+         <div class="topnav" id="myTopnav">
+   <div class="logo">
+    <a href="#" style="font-size:32px;">Recommend Me!</a></div>
+  <a href="#filter">Filters</a>
+  <a href="#findr">Find restaurant</a>
+  <a href="#home" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+       <div class="slideshow-area">
+           <div class="slides">
+               <input type="radio" name="radio.btn" id="radio1">
+               <input type="radio" name="radio.btn" id="radio2">
+               <input type="radio" name="radio.btn" id="radio3">
+               <input type="radio" name="radio.btn" id="radio4">
+
+           <div class="slide first">
+               <img src="/static/images/main1.jpg" alt="Restaurant">
+           </div>
+           <div class="slide">
+               <img src="/static/images/main3.gif" alt="Restaurant">
+           </div>
+           <div class="slide">
+               <img src="/static/images/main4.jpg" alt="Restaurant">
+           </div>
+           <div class="slide">
+               <img src="/static/images/main10.jpg" alt="Restaurant">
+           </div>
+
+           <div class="navi-auto">
+               <div class="auto-btn1"></div>
+               <div class="auto-btn2"></div>
+               <div class="auto-btn3"></div>
+               <div class="auto-btn4"></div>
+           </div>
+           </div>
+               <div class="navi-manual">
+                   <label for="radio1" class="manual-btn"></label>
+                   <label for="radio2" class="manual-btn"></label>
+                   <label for="radio3" class="manual-btn"></label>
+                   <label for="radio4" class="manual-btn"></label>
+               </div>
+       </div>
+
+     <div class="content-area">
+         <div class="grid-flex">
+    <div class="col col-image" style="background-image: url('/static/images/desc10.jpg');">
+    </div>
+    <div class="col col-text">
+      <div class="Aligner-item">
+        <h1>CRAVING FOR DELICIOUS FOOD?</h1>
+         <h1>CONFUSED TO DECIDE WHAT TO EAT?</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid-flex">
+    <div class="col col-image" style="background-image: url('/static/images/desc4.jpg');">
+      &nbsp;
+    </div>
+    <div class="col col-text col-left">
+      <div class="Aligner-item">
+        <h1>WANNA HAVE A HANG-OUT WITH YOUR DEAR ONES?</h1>
+         <h1>WANNA VISIT SOME RESTAURANT?</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-flex">
+    <div class="col col-image" style="background-image: url('/static/images/desc8.jpg');">
+      &nbsp;
+    </div>
+    <div class="col col-text">
+      <div class="Aligner-item">
+        <h1>BUT CONFUSED TO DECIDE WHAT TO TRY AND WHERE TO GO?</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-flex">
+    <div class="col col-image" style="background-image: url('/static/images/desc11.jpg');">
+      &nbsp;
+    </div>
+    <div class="col col-text col-left">
+      <div class="Aligner-item">
+        <h1>DON'T WORRY!</h1>
+         <h1>WE HAVE A SOLUTION TO YOUR PROBLEM</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-flex">
+    <div class="col col-image" style="background-image: url('/static/images/desc12.jpg');">
+      &nbsp;
+    </div>
+    <div class="col col-text">
+      <div class="Aligner-item">
+        <h1>FILTER THE HOTELS AS PER YOUR CHOICE</h1>
+         <h1>VIEW CUSTOMERS FEEDBACK AND RATING FOR THE HOTELS</h1>
+      </div>
+    </div>
+  </div>  
+
+  <div class="grid-flex">
+    <div class="col col-image" style="background-image: url('/static/images/desc2.jpg');">
+      &nbsp;
+    </div>
+    <div class="col col-text col-left">
+      <div class="Aligner-item"  id="findr">
+        <h1>WE RECOMMEND YOU THE TOP RATED RESTAURANTS FOR THE SELECTED FILTER</h1>
+         <h1>SO, HAVE HAPPY EATING!</h1>
+      </div>
+    </div>
+  </div>  
+
+        <div class="cover">
+
+        <div class="find" >
+        <div class="find-txt">
+        <h1>FIND THE HOTEL YOU ARE LOOKING FOR</h1>
+        <form>
+        <div class="form-bx">
+        <input type="text" class="search-field" placeholder="Find restaurant by name">
+        <button class="search-btn" type="button" onclick="fn()">
+        <i class="fa fa-search"></i>Search</button>
+        </div>
+        </form>
+        </div>  
+       <div  id="filter"></div>
+        <div id="search-res" class="container column">
+        <div class="card">
+            <img src="/static/images/main1.jpg" alt="Hotel1">
+             <div class="description">
+                 <h4><b>Hotel Name</b></h4>
+                 <p>Write Description</p>
+             </div>
+         </div>
+        </div>
+        </div>
+   
+
+        <div class="sidenav">
+           <h1>Filters</h1>
+           <button class="dropdown-btn">None</button>
+           <button class="dropdown-btn">Rating based</button>
+           <button class="dropdown-btn1">Cuisine based
+           <i class="fa fa-caret-down"></i>
+           </button>
+           <div class="dropdown-container">
+           <a href="#veg">Indian</a>
+           <a href="#veg">Chinese</a>
+           <a href="#veg">Thai</a>
+           <a href="#veg">Indonesian</a>
+           <a href="#veg">Italian</a>
+           <a href="#veg">French</a>
+           <a href="#veg">Greece</a>
+           <a href="#veg">Morroco</a>
+           </div>
+           <button class="dropdown-btn1">Food type based
+           <i class="fa fa-caret-down"></i>
+           </button>
+           <div class="dropdown-container">
+           <a href="#veg">Veg</a>
+           <a href="#veg">Non-Veg</a>
+           <a href="#veg">Both</a>
+           </div>
+        </div>
+
+        <div class="container column">
+         <div class="card" >
+            <img src="/static/images/main1.jpg" alt="Hotel1">
+             <div class="description">
+                 <h4><b>Hotel Name</b></h4>
+                 <p>Write Description</p>
+             </div>
+         </div>
+
+         <div class="card">
+            <img src="/static/images/main1.jpg" alt="Hotel1">
+             <div class="description">
+                 <h4><b>Hotel Name</b></h4>
+                 <p>Write Description</p>
+             </div>
+         </div>
+         <div class="card">
+            <img src="/static/images/main1.jpg" alt="Hotel1">
+             <div class="description">
+                 <h4><b>Hotel Name</b></h4>
+                 <p>Write Description</p>
+             </div>
+         </div>
+         <div class="card">
+            <img src="/static/images/main1.jpg" alt="Hotel1">
+             <div class="description">
+                 <h4><b>Hotel Name</b></h4>
+                 <p>Write Description</p>
+             </div>
+         </div>
+         <div class="card">
+            <img src="/static/images/main1.jpg" alt="Hotel1">
+             <div class="description">
+                 <h4><b>Hotel Name</b></h4>
+                 <p>Write Description</p>
+             </div>
+         </div>
+     </div>
+        </div>
+
+      
+
+       
+       <div class="footer-container">
+   <div class="footer">
+   <div class="footer-heading footer-1">
+   <h2>For more queries, Contact us</h2>
+   <p>mail@mail.com</p>
+   <p>mail@mail.com</p>
+   <p>mail@mail.com</p>
+   <p>mail@mail.com</p>
+   </div>
+   </div>
+   </div>     
+  
+      </div>
+   </div>
+
+
+<script type="text/javascript">
+var cnt=1;
+setInterval(function(){
+ document.getElementById('radio'+cnt).checked=true;
+ cnt++;
+ if(cnt >4){
+  cnt=1;
+ }
+},5000);
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var dropdown1 = document.getElementsByClassName("dropdown-btn1");
+var i;
+
+for (i = 0; i < dropdown1.length; i++) {
+  dropdown1[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+function fn(){
+ var searchres = document.getElementById("search-res");
+  if (searchres.style.display === "block") {
+  searchres.style.display = "none";
+  } else {
+  searchres.style.display = "block";
+  }
+}
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>

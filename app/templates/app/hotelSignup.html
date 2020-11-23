@@ -1,16 +1,22 @@
-{% load static %}
+{%load static%}
 </!DOCTYPE html>
 <html>
 <head>
 	<title>RecommendME!!!- Restaurant Signup</title>
-	<link rel="stylesheet" href="{% static '/cssFiles/hotelSignup.css' %}">
+	<link rel="stylesheet" href="{%static 'cssFiles\hotelSignup.css' %}">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-	<script type="text/javascript" src="{% static '/javascriptFiles/hotelSignup.js' %}"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&display=swap" rel="stylesheet">
+  
+	<script type="text/javascript" src="{%static 'javascriptFiles\hotelSignup.js'%}"></script>
 </head>
+<style>
+
+
+</style>
 <body >
 
-		<div class='top'>
+		<div class='top'  >
 		
 		<h3  style="font-family: 'Trebuchet MS', Helvetica, sans-serif; text-align: center; color: white ;padding-top: 300px; font-size: 50px;opacity: 0.9">WELCOME</h3>
 
@@ -19,91 +25,9 @@
 	</div>
 <div class='backb'>		
 <div class='formm'>
-	<form>
-		<label for="fname">Restaurant/Cafe/Resort Name</label><br>
-		<input type="text" id='fname' name="hotelname" placeholder="Enter Name of the Place...">
-		<br><br>
-		<label for="address">Restaurant/Cafe/Resort Location</label><br>
-		<input type="text" id='address' name="address" placeholder="Enter proper location of place..." >
-<br><br>
-<label for="Otime">Restaurant/Cafe/Resort Opening Time</label><br>
-		<input type="time" id='Otime' name="Otime" ><br><br>
-		<label for="Ctime">Restaurant/Cafe/Resort Closing Time</label><br>
-		<input type="time" id='Ctime' name="Ctime" >
-<br><br>
-<label for="menu">Top Five FoodStuff of place</label>
-<br><br>
-		<input type="text" id='menu' name="menu" placeholder="1. FoodStuff"><br>
-		<input type="text" id='menu' name="menu" placeholder="2. FoodStuff"><br>
-		<input type="text" id='menu' name="menu" placeholder="3. FoodStuff"><br>
-		<input type="text" id='menu' name="menu" placeholder="4. FoodStuff"><br>
-		<input type="text" id='menu' name="menu" placeholder="5. FoodStuff"><br>
-
-<br><br>
-<label for='cuisine'>Cuisines available at your place </label>
-<br>
-<label for='Indian'>Indian</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Indian'>
-<br>
-<label for='Chinese'>Chinese</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Chinese'>
-<br>
-<label for='Thai'>Thai</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Thai'>
-<br>
-<label for='Indonesian'>Indonesian</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Indonesian'>
-<br>
-<label for='Italian'>Italian</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Italian'>
-<br>
-<label for='Spainish'>Spainish</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Spainish'>
-<br>
-<label for='Japanese'>Japanese</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Japanese'>
-<br>
-<label for='Greece'>Greece</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Greece'><br>
-<label for='French'>French</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='French'>
-
-<br>
-<label for='Moroccan'>Moroccan</label>
-<input type="checkbox" name="cuisine" id='cuisine' value='Moroccan'>
-<br>
-<br>
-<label for="id">Business ID</label>
-<br>
-<input type="text" name="id" id='id' placeholder="Business ID">
-<br><label>Choose your place profile</label><br>
-<input type="file" name="profile" id='pic'>
-<br>
-<img src="#" id="profile" alt="Your image" height=300 width=300>
-<br><br>
-<label for='foodType'>Choose your food type</label>
-<br>
-<label for="veg">Vegetarian</label>
-<input type="radio" name="foodType" value="veg">
-<br>
-<label for="non-veg">Non-Vegetarian</label>
-<input type="radio" name="foodType" value="non-veg">
-<br>
-<label for="both">Both</label>
-<input type="radio" name="foodType" value="both">
-<br><br>
-<label>Enter an Email for your account</label><br>
-<input type="email" name="email" id='email' placeholder="Please enter an email starting with 'U' ">
-<br><br>
-<label>Enter a strog password for your account consisting of atleast 8 digits</label><br>
-<input type="password" name="pwd" id='pwd' placeholder="Password">
-
-<br><br>
-<label>Enter your contact number</label><br>
-<input type="tel" id="phone" name="phone" placeholder="999999999" pattern="[0-9]{10}" required>
-
-<br><br>
-
+	<form class='hotelSignupform' action="." method="POST"> {% csrf_token %}
+		{{ form.as_p }}
+		
 <input type="submit" value="Submit" >
 
 	</form>

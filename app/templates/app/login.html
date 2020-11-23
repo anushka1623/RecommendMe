@@ -77,10 +77,10 @@
 <dv class="login" style="font-size: 26px">
         <form id='login' method='POST'> {% csrf_token %}
 			<label><b>Username</b></label>
-			<input type="text" name="Username" id="Uname" placeholder="Username" required>
+			<input type="text" name="username" id="Uname" placeholder="username" required>
 			<br>
 			<label><b>Password</b></label>
-			<input type="Password" name="password" id="Pass" placeholder="Password" required>
+			<input type="password" name="password" id="Pass" placeholder="password" required>
 			<br><br>
 			<p>{{error}}</p>
 			<button type="submit" name="loginUser" id="loginUser"  class="button" style="margin-bottom: 5px;"><span>Login User</span></button>
