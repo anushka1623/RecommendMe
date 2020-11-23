@@ -31,7 +31,6 @@ class Customer(models.Model):
     cuisinetype = MultiSelectField(null=True,choices = CuisineType)
     DateOfBirth = models.DateField(null= True)
     Email = models.EmailField(null = True)
-    ProfilePic = models.ImageField(null = True)
     ContactNo = models.CharField(max_length=10, null=True)
 
 

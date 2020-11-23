@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RecommendME!!!-User Profile</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/cssFiles/Userprofile.css' %}">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>  
+    <script src="{% static '/javascriptFiles/userprofile.js' %}"></script>
+    </head>
+<body style="background-color:black; color: blanchedalmond; font-family: 'Alegreya', serif; font-size: 30px;">
+
+    <nav>
+        <a href="#" class=navi>Home</a>
+        <a href="#" class=navi>Update details</a>
+         </nav>
+         <br>
+         <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a >Cuisine Choice :</a>
+            <a >Indian</a>
+            <a >Indonesian</a>
+            <a>Chinese</a>
+            <a >Italian</a>
+            <a >Indian</a>
+            <a >Indonesian</a>
+            <a >Chinese</a>
+            <a >Italian</a>
+            <a >Indian</a>
+            <a >Indonesian</a>
+            <a >Chinese</a>
+            <a >Italian</a>
+          </div>
+
+<div class='top' style="background: url(' /static/images/img50.jpg ' ) ;
+ background-size: cover;background-repeat: no-repeat; width: 100%; height: 100%; margin: 0px;">
+<div class='flex-container' style="display: flex;">
+<div style="flex-grow: 20; margin-left: 10px;">
+<h1 style="font-size: 70px;">Andrill Jelly</h1>
+<h1 style="font-size: 40px;color: lightgoldenrodyellow;">Hailey
+    <br>
+    Wails Street
+</h1>
+<div style="color:whitesmoke;">
+-Krishna@gmail.com<br>
+9993455666
+</div>
+<br>
+<div style="font-size: 40px;">
+<u>Birth Date :</u>   28/11/2001<br><br>
+Vegetarian by nature :) <br>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Favorite Cusines</span>
+
+</div>
+
+
+</div>
+
+<div style="flex-grow: 1;">
+<img src='https://source.unsplash.com/500x500/?girl' style="width: 500px; border-radius: 50%; margin-top:10%; ">
+  </div>
+ </div>  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+body
+{background:url('/static/images/img47.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+ margin: 0px;
+	
+}
+nav{
+
+ line-height: 80px;
+position: absolute;
+margin-top:0px;
+background-color: black;
+width: 100%;
+}
+nav a{
+ text-decoration: none;
+ font-family: sans-serif;
+ letter-spacing: 4px;
+ font-size: 20px;
+ margin: 0 10px;
+ color: #fff;
+
+}
+nav a:hover
+{border:1px red solid;
+	padding: 20px;
+	background-color: orange;
+}
+div
+{
+
+	font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+	color: white;
+	font-weight: 40px;
+}
+
+.formm
+{
+  border-radius: 100px;
+  background-color: #f2f2f2;
+  padding: 50px;
+  
+  margin-left: 100px;
+  margin-right: 100px;
+
+
+  font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+  color:#FFAF50 ;
+   font-size: 30px;
+}
+input[type=submit]
+{
+   width: 100%;
+  background-color: #FFAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=checkbox]
+{
+  height: 30px;
+  width: 30px;
+
+}
+input[type=file]
+{
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: orange;
+ font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+ border:1px orange solid;
+ padding: 10px; 
+ border-radius: 30px;
+}
+#profile
+{
+  border: 2px black solid; 
+  height: 300px;
+  width: 300px;
+}
+input[type=text], select {
+  width: 100%;
+  height: 60px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=time], select {
+  width: 50%;
+  height: 60px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.backb
+{
+  background: url('/static/images/img47.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn-primary
+{
+   width: 30%;
+  background-color: #FFAF50;
+  color: white;
+  padding: 7px 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+font-size: 18px;
+font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+
+}
+.btn-primary:hover {
+  background-color: #45DDF7;
+}
+input[type=radio]
+{
+  width: 30px;
+  height: 30px;
+
+}
+input[type=password],select
+{
+  width: 40%;
+  height: 6
+  0px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=tel],select
+{
+  
+  height: 40px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email],select
+{
+  width: 40%;
+  height: 60px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

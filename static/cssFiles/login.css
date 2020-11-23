@@ -1,0 +1,131 @@
+
+  
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+  background: url('/static/images/img47.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-container > div {
+  
+  margin:  20px;
+  
+  font-size: 30px;
+}
+
+
+body{
+  margin: 0;
+  
+ 
+}
+*{
+  box-sizing: border-box;
+  font-family: 'Alegreya', serif;
+}
+
+img
+{
+  opacity: 1;
+}
+
+.c.hide
+{
+  display: none;
+}
+.c.show 
+{
+  display: block;
+  animation: show 5s ease;
+}
+@keyframes show{
+    0%{
+      opacity:0;
+      transform: scale(0.9);
+    }
+    100%{
+      opacity:1;
+      transform: scale(1);
+    }
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 280px;
+  height: 45px;
+  transition: all 0.5s;
+  cursor: pointer;
+  
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+ 
+}
+#log
+{
+  margin-bottom: 10px;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+
+}
+.button :hover
+{
+  background-color: #bb511e;
+}
+.button:hover span {
+
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+} 
+input[type=text]:focus {
+  border: 3px solid #555;
+  height: 50px;
+
+}
+input[type=text]
+{
+  border: 2px solid beige;
+  height: 40px;
+  width: 100%;
+}
+input[type=password]:focus {
+  border: 3px solid #555;
+  height: 50px;
+
+}
+input[type=password]
+{
+  border: 2px solid beige;
+  height: 40px;
+  width: 100%;
+}
+label
+{
+  font-size:30px;
+  color:bisque;
+ 
+}
+
+

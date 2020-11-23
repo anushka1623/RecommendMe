@@ -26,15 +26,17 @@ def login(request):
 def hotelSignup(request):
     return render(request, 'app/hotelSignup.html')
 
+def Userprofile(request):
+    return render(request, 'app/Userprofile.html')
+
 
 def userSignup(request):
     if request.method == "POST":
         form = userSignupform(request.POST)
         if form.is_valid():
             form.save()
+            return render(request, 'app/login.html')
     else:
         form = userSignupform()
     
-    return render(request, 'app/userSignup.html', {'form': form})
-
     return render(request, 'app/userSignup.html', {'form': form})
