@@ -37,23 +37,23 @@
  background-size: cover;background-repeat: no-repeat; width: 100%; height: 100%; margin: 0px;">
 <div class='flex-container' style="display: flex;">
 <div style="flex-grow: 20; margin-left: 10px;">
-<h1 style="font-size: 70px;">Andrill Jelly</h1>
-<h1 style="font-size: 40px;color: lightgoldenrodyellow;">Hailey
+<h1 style="font-size: 70px;">{{ob.FirstName}}  {{ob.LastName}}</h1>
+<h1 style="font-size: 40px;color: lightgoldenrodyellow;">{{ob.username}}
     <br>
-    Wails Street
+    {{ob.Location}}
 </h1>
 <div style="color:whitesmoke;">
--Krishna@gmail.com<br>
-9993455666
+{{ob.Email}}<br>
+{{ob.ContactNo}}
 </div>
 <br>
 <div style="font-size: 40px;">
-<u>Birth Date :</u>   28/11/2001<br><br>
-Vegetarian by nature :) <br>
+<u>Birth Date :</u>  {{ob.DateOfBirth}}<br><br>
+{{ob.foodtype}}etarian by nature :) <br>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Favorite Cusines</span>
 
 </div>
-
+{{ob.cuisinetype}}
 
 </div>
 

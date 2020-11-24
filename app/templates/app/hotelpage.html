@@ -26,7 +26,7 @@
         <div class="text-block">
          
         
-        <h1>Hotel Name</h1>
+        <h1>{{ob.HotelName}}</h1>
         <p>A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore
  just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming 
 and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking
@@ -279,25 +279,25 @@ The Fox also offers gluten free bread and gluten free Yorkshire puddings on a Su
            <div class="cbox">
             <div class="ccontent">
             <p onclick="myFunction1()"><span class="fa fa-map-marker"></span> LOCATION:</p>
-            <p>  423 Some adr, Chicago, US </p>
+            <p> {{ob.Location}} </p>
             </div>
            </div>
            <div class="cbox">
              <div class="ccontent">
              <p><span class="fa fa-clock-o"></span> OPENING, CLOSING TIME:</p>
-             <p>  9am, 11pm </p>
+             <p>  {{ob.OpeningTime}}, {{ob.ClosingTime}} </p>
              </div>
            </div>
            <div class="cbox">
               <div class="ccontent">
               <p><span class="fa fa-phone"></span> CONTACT NUMBER:</p>
-              <p>  +00 151515 </p>
+              <p>  {{ob.ContactNo}} </p>
               </div>
            </div>
            <div class="cbox">
              <div class="ccontent">
              <p><span class="fa fa-envelope"></span> EMAIL:</p>
-             <p> mail@mail.com </p>
+             <p> {{ob.Email}} </p>
              </div>
            </div>
        </div>

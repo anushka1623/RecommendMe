@@ -56,8 +56,11 @@ def hotelSignup(request):
     
     return render(request, 'app/hotelSignup.html', {'form': form})
 
+
 def Userprofile(request):
-    return render(request, 'app/Userprofile.html')
+    user = Customer.objects.get( id = request.user.id )
+    args = {'ob': user}
+    return render(request, 'app/Userprofile.html', args)
 
 def mainscreen(request):
     return render(request, 'app/mainscreen.html')
@@ -69,7 +72,9 @@ def updateHotelProfile(request):
     return render(request, 'app/updateHotelProfile.html')
 
 def hotelpage(request):
-    return render(request, 'app/hotelpage.html')
+    user = Hotel.objects.get(id=1)
+    args = {'ob': user}
+    return render(request, 'app/hotelpage.html', args)
 
 
 def userSignup(request):
