@@ -1,0 +1,360 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOL Mexican Cocina</title>
+    <link rel = "stylesheet" href="{% static '/cssFiles/hotelpage.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+   <div class="main">
+   
+   <div class="topnav" id="myTopnav">
+   <div class="logo">
+    <a href="#news" style="font-size:32px;">Recommend Me!</a></div>
+  <a href="#">Update Profile</a>
+  <a href="http://127.0.0.1:8000/mainscreen/" class="active">Home</a>
+  <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+       <div class="image">
+       </div>
+       <div class="content">
+        <div class="head">
+        <div class="text-block">
+         
+        
+        <h1>SOL Mexican Cocina</h1>
+        <p>A quality and relaxing rural country pub, run by award winning owners, in the beautiful Berkshire village of Peasemore
+ just a short drive from the A34 and junctions 13 and 14 of the M4. The building and decor are charming 
+and rustic, with elegant modern touches. Relax by the cozy log burner perfect for winter evenings or enjoy outdoor seating overlooking
+ open country fields or in a pretty courtyard filled with flowers in the summer months. A daily menu, all freshly prepared in the pub
+ kitchen, includes fresh fish, pies, steaks and chef's daily specials with main course prices ranging from £11.50 - £19.50. As all dishes 
+are prepared in the pub kitchen, they are able to cater for most dietary needs, with most sauces, soups and gravy all created gluten free.</p>
+     </div> 
+     <button id="offers">View Offers</button> 
+  </div>
+       <div class="c2">
+       <h1>Gallery</h1>
+        <hr class="line">
+       
+        <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="/static/images/main1.jpg" alt="Gallery image 1" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="/static/images/main3.gif" alt="Gallery image 2" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="/static/images/main4.jpg" alt="Gallery image 3" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <img src="/static/images/main10.jpg" alt="Gallery image 4" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                    <img src="/static/images/main4.jpg" alt="Gallery image 5" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--6">
+                    <img src="/static/images/main1.jpg" alt="Gallery image 6" class="gallery__img">
+                </figure>
+            </div>
+        
+        <h1>Menu</h1>
+        <hr class="line">
+        
+        <div class="mrow">
+         <div class="menubox">
+             <div class="mcol">
+              <div class="mcontent">
+              <img src="/static/images/starters.jpg" id="i1">
+              <p>Starters</p>
+              </div>
+             </div>
+             <div class="mcol">
+              <div class="mcontent">
+               <img src="/static/images/maincourse.jfif" id="i2">
+               <p>Maincourse</p>
+              </div>
+             </div>
+             <div class="mcol">
+              <div class="mcontent">
+               <img src="/static/images/salad.jpeg" id="i3">
+               <p>Salad</p>
+              </div>
+             </div>
+       </div>
+     
+       <div class="menubox">
+            <div class="mcol">
+              <div class="mcontent">
+              <img src="/static/images/soup.jpeg" id="i4">
+              <p>Soup</p>
+             </div>
+            </div>
+             <div class="mcol">
+              <div class="mcontent">
+               <img src="/static/images/beverages.jpeg" id="i5">
+               <p>Beverages</p>
+              </div>
+             </div>
+           <div class="mcol">
+            <div class="mcontent">
+            <img src="/static/images/sweet.jpg" id="i6">
+            <p>Desserts</p>
+           </div>
+      </div>
+     </div>
+    
+  <div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1><b>Margherita</b> <span class="price">$12.50</span></h1>
+      <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="price">$15.50</span></h1>
+      <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      <h1><b>Margherita</b> <span class="price">$12.50</span></h1>
+      <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="price">$15.50</span></h1>
+      <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      <h1><b>Margherita</b> <span class="price">$12.50</span></h1>
+      <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="price">$15.50</span></h1>
+      <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      <h1><b>Margherita</b> <span class="price">$12.50</span></h1>
+      <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="price">$15.50</span></h1>
+      <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      <br></br>
+      <br></br>
+  </div>      
+</div>
+
+  <div id="myModal1" class="modal">
+
+  <div class="modal-content1">
+    <span class="close">&times;</span>
+    <h1><b>Margherita</b> <span class="price">$12.50</span></h1>
+      <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+   
+      <h1><b>Formaggio</b> <span class="price">$15.50</span></h1>
+      <p>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
+      <hr>
+      <h1><b>Margherita</b> <span class="price">$12.50</span></h1>
+      <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+      <h1><b>Margherita</b> <span class="price">$12.50</span></h1>
+      <p>Fresh tomatoes, fresh mozzarella, fresh basil</p>
+      <hr>
+      <br></br>
+      <br></br>
+  </div>      
+</div>
+
+        <h1>Customer Reviews</h1>
+        <hr class="line">
+        
+        <div class="box-col">
+        <div class="col review-box">
+        <div class="cntr">
+        <p>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        </p>
+        <p>Superb services and amazing food taste</p>
+        <img src="/static/images/female_avatar.jpg" style="width:50px">
+        <p>Username: Alisha12</p>
+        </div>
+        
+        <div class="cntr">
+        <p>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        </p>
+        <p>fabulous place to dine in and have a hearty time</p>
+        <img src="/static/images/female_avatar.jpg" style="width:50px">
+        <p>Username: Mohsin Khan</p>
+        </div>
+        
+        <div class="cntr">
+        <p>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        </p>
+        <p>Tasty and appetite full-filling delicious yummy cuisines</p>
+        <img src="/static/images/female_avatar.jpg" style="width:50px">
+        <p>Username: Shivani Tyagi589</p>
+        </div>
+        
+        <div class="cntr">
+        <p>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star checked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        <span onclick="myFunction(this)" class="fa fa-star unchecked"></span>
+        </p>
+        <p>Love the interior styling and menu offered</p>
+        <img src="/static/images/female_avatar.jpg" style="width:50px">
+        <p>Username: Nikhil Rastogi 44</p>
+        </div>
+        
+        
+
+        </div>
+        
+        <div class="col write">
+        <h1>Write your reviews</h1>
+        <ul class="try">
+        <li>
+         <p>Rate:
+        <span class="rate" style="padding-left:100px">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+  
+        </span>       
+        </p>
+        </li>
+         <li>
+         <p>Review:
+         <span style="padding-left:90px"><textarea  id="comments" rows="5" cols="100">
+        Enter your review....
+          </textarea></span>
+         </p>
+         </li>
+         </ul>
+          <br></br>
+         <p>
+         <span>
+         <button class="btn1 b1">Post</button> 
+         </span>
+         </p>
+        </div>
+        
+        <div class="col main-content">
+           <div class="cbox">
+            <div class="ccontent">
+            <p onclick="myFunction1()"><span class="fa fa-map-marker"></span> LOCATION:</p>
+            <p>  15323 N Scottsdale Rd, Ste 195, Scottsdale </p>
+            </div>
+           </div>
+           <div class="cbox">
+             <div class="ccontent">
+             <p><span class="fa fa-clock-o"></span> OPENING, CLOSING TIME:</p>
+             <p>  9am, 11pm </p>
+             </div>
+           </div>
+           <div class="cbox">
+              <div class="ccontent">
+              <p><span class="fa fa-phone"></span> CONTACT NUMBER:</p>
+              <p>  9999923415 </p>
+              </div>
+           </div>
+           <div class="cbox">
+             <div class="ccontent">
+             <p><span class="fa fa-envelope"></span> EMAIL:</p>
+             <p> solmexicancocina@gmail.com </p>
+             </div>
+           </div>
+       </div>
+        </div>
+       </div>
+        </div>
+       </div>
+<script>
+
+var modal = document.getElementById("myModal");
+var modal1 = document.getElementById("myModal1");
+
+var btn1 = document.getElementById("i1");
+var btn2 = document.getElementById("i2");
+var btn3 = document.getElementById("i3");
+var btn4 = document.getElementById("i4");
+var btn5 = document.getElementById("i5");
+var btn6 = document.getElementById("i6");
+
+var offer = document.getElementById("offers");
+
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close")[1];
+
+btn1.onclick = function() {
+  modal.style.display = "block";
+}
+btn2.onclick = function() {
+  modal.style.display = "block";
+}
+btn3.onclick = function() {
+  modal.style.display = "block";
+}
+btn4.onclick = function() {
+  modal.style.display = "block";
+}
+btn5.onclick = function() {
+  modal.style.display = "block";
+}
+btn6.onclick = function() {
+  modal.style.display = "block";
+}
+offer.onclick = function() {
+  modal1.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
